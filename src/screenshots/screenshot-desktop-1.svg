@@ -1,0 +1,8 @@
+<svg width="1280" height="720" viewBox="0 0 1280 720" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1280" height="720" fill="#f9f9f9"/>
+  <rect x="0" y="0" width="1280" height="60" fill="#3498db"/>
+  <text x="20" y="35" font-family="Arial" font-size="18" fill="white">Dicoding Story App</text>
+  <rect x="20" y="80" width="1240" height="200" fill="white" stroke="#ddd"/>
+  <text x="640" y="360" font-family="Arial" font-size="24" text-anchor="middle" fill="#666">App Screenshot</text>
+  <text x="640" y="390" font-family="Arial" font-size="16" text-anchor="middle" fill="#999">1280x720</text>
+</svg>

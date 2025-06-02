@@ -1,0 +1,35 @@
+{
+  "name": "dicoding-story-app",
+  "version": "1.0.0",
+  "description": "Progressive Web App untuk berbagi cerita dengan Dicoding Story API",
+  "main": "src/scripts/app.js",
+  "scripts": {
+    "build": "webpack --mode production",
+    "dev": "webpack serve --mode development",
+    "start": "webpack serve --mode development --open"
+  },
+  "keywords": [
+    "pwa",
+    "dicoding",
+    "story",
+    "progressive-web-app"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "idb": "^7.1.1",
+    "workbox-window": "^6.5.4"
+  },
+  "devDependencies": {
+    "webpack": "^5.88.0",
+    "webpack-cli": "^5.1.0",
+    "webpack-dev-server": "^4.15.0",
+    "html-webpack-plugin": "^5.5.0",
+    "copy-webpack-plugin": "^11.0.0",
+    "workbox-webpack-plugin": "^6.5.4",
+    "css-loader": "^6.8.0",
+    "style-loader": "^3.3.0",
+    "file-loader": "^6.2.0",
+    "url-loader": "^4.1.1"
+  }
+}

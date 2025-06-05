@@ -1,0 +1,65 @@
+<svg width="750" height="1334" viewBox="0 0 750 1334" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="750" height="1334" fill="#f8f9fa"/>
+  
+  <!-- Status bar -->
+  <rect x="0" y="0" width="750" height="44" fill="#2c3e50"/>
+  <text x="30" y="28" font-family="Arial, sans-serif" font-size="16" fill="white" font-weight="bold">9:41</text>
+  <text x="680" y="28" font-family="Arial, sans-serif" font-size="14" fill="white">100%</text>
+  
+  <!-- Header -->
+  <rect x="0" y="44" width="750" height="88" fill="#3498db"/>
+  <text x="30" y="95" font-family="Arial, sans-serif" font-size="24" fill="white" font-weight="bold">📖 Dicoding Story</text>
+  
+  <!-- Navigation bar -->
+  <rect x="0" y="132" width="750" height="70" fill="#2980b9"/>
+  <text x="80" y="170" font-family="Arial, sans-serif" font-size="16" fill="white">🏠</text>
+  <text x="200" y="170" font-family="Arial, sans-serif" font-size="16" fill="white">➕</text>
+  <text x="320" y="170" font-family="Arial, sans-serif" font-size="16" fill="white">💾</text>
+  <text x="440" y="170" font-family="Arial, sans-serif" font-size="16" fill="white">🔔</text>
+  <text x="560" y="170" font-family="Arial, sans-serif" font-size="16" fill="white">👤</text>
+  
+  <!-- Content area -->
+  <rect x="20" y="220" width="710" height="1044" fill="white" stroke="#e9ecef" stroke-width="1" rx="12"/>
+  
+  <!-- Title -->
+  <text x="40" y="260" font-family="Arial, sans-serif" font-size="24" fill="#2c3e50" font-weight="bold">Cerita Terbaru</text>
+  <text x="40" y="285" font-family="Arial, sans-serif" font-size="14" fill="#6c757d">Cerita dari pengguna Dicoding Story</text>
+  
+  <!-- Story cards mobile layout -->
+  <rect x="40" y="310" width="670" height="220" fill="#fff" stroke="#dee2e6" stroke-width="1" rx="8"/>
+  <rect x="40" y="310" width="670" height="150" fill="#e3f2fd"/>
+  <text x="375" y="420" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#495057" font-weight="bold">📖 Adventure in Bali</text>
+  <text x="375" y="445" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#6c757d">by Sarah Johnson</text>
+  <text x="375" y="465" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#6c757d">📍 Bali • ⏰ 1 hour ago</text>
+  <text x="375" y="485" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#6c757d">Amazing sunset at Tanah Lot temple...</text>
+  <rect x="600" y="500" width="80" height="20" fill="#3498db" rx="10"/>
+  <text x="640" y="512" font-family="Arial, sans-serif" font-size="10" fill="white" text-anchor="middle">Save Offline</text>
+  
+  <rect x="40" y="550" width="670" height="220" fill="#fff" stroke="#dee2e6" stroke-width="1" rx="8"/>
+  <rect x="40" y="550" width="670" height="150" fill="#e8f5e8"/>
+  <text x="375" y="660" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#495057" font-weight="bold">🏔️ Mountain Hiking</text>
+  <text x="375" y="685" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#6c757d">by Mike Chen</text>
+  <text x="375" y="705" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#6c757d">📍 Gunung Bromo • ⏰ 3 hours ago</text>
+  <text x="375" y="725" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#6c757d">Incredible sunrise view from the crater...</text>
+  <rect x="600" y="740" width="80" height="20" fill="#3498db" rx="10"/>
+  <text x="640" y="752" font-family="Arial, sans-serif" font-size="10" fill="white" text-anchor="middle">Save Offline</text>
+  
+  <rect x="40" y="790" width="670" height="220" fill="#fff" stroke="#dee2e6" stroke-width="1" rx="8"/>
+  <rect x="40" y="790" width="670" height="150" fill="#fff3e0"/>
+  <text x="375" y="900" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#495057" font-weight="bold">🏖️ Beach Vacation</text>
+  <text x="375" y="925" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#6c757d">by Lisa Wong</text>
+  <text x="375" y="945" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#6c757d">📍 Lombok • ⏰ 5 hours ago</text>
+  <text x="375" y="965" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#6c757d">Perfect day at Pink Beach with crystal...</text>
+  <rect x="600" y="980" width="80" height="20" fill="#3498db" rx="10"/>
+  <text x="640" y="992" font-family="Arial, sans-serif" font-size="10" fill="white" text-anchor="middle">Save Offline</text>
+  
+  <!-- Map preview -->
+  <rect x="40" y="1030" width="670" height="200" fill="#e8f4f8" stroke="#81d4fa" stroke-width="2" rx="8"/>
+  <text x="375" y="1140" font-family="Arial, sans-serif" font-size="18" text-anchor="middle" fill="#0277bd" font-weight="bold">🗺️ Story Locations</text>
+  <text x="375" y="1165" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#0288d1">Tap to explore on map</text>
+  
+  <!-- FAB Button -->
+  <circle cx="650" cy="1180" r="35" fill="#3498db" stroke="white" stroke-width="3"/>
+  <text x="650" y="1190" font-family="Arial, sans-serif" font-size="24" fill="white" text-anchor="middle" font-weight="bold">+</text>
+</svg>

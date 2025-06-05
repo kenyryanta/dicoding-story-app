@@ -1,0 +1,19 @@
+Nama: [M.kenny ryanta]
+Email: [Kenyryanta10@gmail.com]
+Kelas: [Belajar Pengembangan Web Intermediate]
+
+URL Deployment: https://kenyryanta.github.io/dicoding-story-app/
+
+Catatan: 
+- Aplikasi menggunakan Webpack untuk bundling dan development server
+- Menggunakan OpenStreetMap untuk peta (tidak memerlukan API key)
+- VAPID Public Key untuk Push Notification: BDXnCSlYgIS47EVVE08yYre0CHQpM4jLqYv_h-Fk75KjNfD8b2qG3B9G4GZ8P9X9j3w4qO0D8t5F_y0nL6J7Z7s
+- Aplikasi telah mengimplementasikan PWA dengan fitur offline, installable, dan push notification
+- Menggunakan arsitektur MVP (Model-View-Presenter)
+- Menggunakan IndexedDB untuk penyimpanan offline
+- Menggunakan Workbox untuk service worker dan caching strategy
+
+Cara menjalankan:
+1. npm install
+2. npm run dev (untuk development)
+3. npm run build (untuk production)

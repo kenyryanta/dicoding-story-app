@@ -1,6 +1,6 @@
-// VAPID Public Key yang benar untuk Dicoding Story API
+// VAPID Public Key yang benar dari Dicoding Story API
 const VAPID_PUBLIC_KEY =
-  "BDXnCSlYgIS47EVVE08yYre0CHQpM4jLqYv_h-Fk75KjNfD8b2qG3B9G4GZ8P9X9j3w4qO0D8t5F_y0nL6J7Z7s";
+  "BCCs2eonMI-6H2ctvFaWg-UYdDv387Vno_bzUzALpB442r2lCnsHmtrx8biyPi_E-1fSGABK_Qs_GlvPoJJqxbk";
 
 function urlBase64ToUint8Array(base64String) {
   const padding = "=".repeat((4 - (base64String.length % 4)) % 4);
@@ -44,12 +44,10 @@ const NotificationHelper = {
     }
 
     try {
-      // Tunggu service worker siap
       console.log("Waiting for service worker to be ready...");
       const registration = await navigator.serviceWorker.ready;
       console.log("Service worker is ready:", registration);
 
-      // Cek subscription yang ada
       const existingSubscription =
         await registration.pushManager.getSubscription();
       if (existingSubscription) {
@@ -57,12 +55,10 @@ const NotificationHelper = {
         return existingSubscription;
       }
 
-      // Konversi VAPID key
       console.log("Converting VAPID key...");
       const applicationServerKey = urlBase64ToUint8Array(VAPID_PUBLIC_KEY);
       console.log("VAPID key converted successfully");
 
-      // Subscribe ke push manager
       console.log("Subscribing to push manager...");
       const subscription = await registration.pushManager.subscribe({
         userVisibleOnly: true,
@@ -71,24 +67,13 @@ const NotificationHelper = {
 
       console.log("User subscribed successfully:", subscription);
 
-      // Simpan subscription ke localStorage untuk demo
+      // SKIP server subscription untuk development - hanya simpan lokal
       localStorage.setItem("pushSubscription", JSON.stringify(subscription));
+      console.log("Subscription saved locally (development mode)");
 
       return subscription;
     } catch (error) {
       console.error("Failed to subscribe the user:", error);
-
-      // Error handling yang lebih detail
-      if (error.name === "NotSupportedError") {
-        console.error("Push messaging is not supported");
-      } else if (error.name === "NotAllowedError") {
-        console.error("Permission not granted for push notifications");
-      } else if (error.name === "InvalidStateError") {
-        console.error("Service worker is in invalid state");
-      } else {
-        console.error("Unknown error:", error.message);
-      }
-
       return null;
     }
   },
@@ -143,13 +128,15 @@ const NotificationHelper = {
       try {
         const registration = await navigator.serviceWorker.ready;
 
-        // Simulasi push notification untuk demo
         const notificationData = {
-          title: "Test Notification",
-          body: "Ini adalah notifikasi test dari Dicoding Story App!",
-          icon: "/icons/icon-192x192.png",
-          badge: "/icons/icon-72x72.png",
+          title: "Test Notification - Dicoding Story",
+          body: "Push notification berhasil berjalan di development!",
+          icon: "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTkyIiBoZWlnaHQ9IjE5MiIgdmlld0JveD0iMCAwIDE5MiAxOTIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3Qgd2lkdGg9IjE5MiIgaGVpZ2h0PSIxOTIiIGZpbGw9IiMzNDk4ZGIiLz48dGV4dCB4PSI1MCUiIHk9IjUwJSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjQ4IiBmaWxsPSJ3aGl0ZSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkRTPC90ZXh0Pjwvc3ZnPg==",
+          badge:
+            "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNzIiIGhlaWdodD0iNzIiIHZpZXdCb3g9IjAgMCA3MiA3MiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iNzIiIGhlaWdodD0iNzIiIGZpbGw9IiMyOTgwYjkiLz48dGV4dCB4PSI1MCUiIHk9IjUwJSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE4IiBmaWxsPSJ3aGl0ZSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkRTPC90ZXh0Pjwvc3ZnPg==",
           data: { url: "/" },
+          requireInteraction: true,
+          tag: "dicoding-story-test",
         };
 
         await registration.showNotification(notificationData.title, {
@@ -157,6 +144,8 @@ const NotificationHelper = {
           icon: notificationData.icon,
           badge: notificationData.badge,
           data: notificationData.data,
+          requireInteraction: notificationData.requireInteraction,
+          tag: notificationData.tag,
         });
 
         console.log("Test notification sent successfully");

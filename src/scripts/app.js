@@ -41,7 +41,7 @@ const registerServiceWorker = async () => {
   }
 };
 
-// Setup Push Notification Buttons
+// Setup Push Notification Buttons dengan integrasi Dicoding API
 const setupPushNotificationButtons = async () => {
   const subscribeBtn = document.getElementById("subscribePushBtn");
   const unsubscribeBtn = document.getElementById("unsubscribePushBtn");
@@ -67,6 +67,7 @@ const setupPushNotificationButtons = async () => {
         subscribeBtn.style.display = "none";
         unsubscribeBtn.style.display = "inline-block";
 
+        // Test notification
         setTimeout(() => {
           NotificationHelper.sendTestNotification();
         }, 2000);
